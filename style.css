@@ -1,0 +1,184 @@
+/* Importing a high-quality font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Apply a modern, clean font */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* Container layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Selection section styling */
+.selection-section {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.selection-section label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.selection-section select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.selection-section select:focus {
+    border-color: #007BFF;
+}
+
+/* Flexbox layout for news and donation sections */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.news-section, .donation-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.news-section:hover, .donation-section:hover {
+    transform: translateY(-10px);
+}
+
+.news-section {
+    height: 70vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-section, .donation-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Section headers */
+h2 {
+    color: #007BFF;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #007BFF;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+/* News and organization items */
+.news-item, .organization-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.news-item:hover, .organization-item:hover {
+    background-color: #f9f9f9;
+}
+
+.news-item h3, .organization-item h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #007BFF;
+}
+
+.news-item p, .organization-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Donate button styling */
+.donate-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.donate-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
