@@ -175,6 +175,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const orgItem = document.createElement('div');
             orgItem.className = 'organization-item';
             orgItem.innerHTML = `<h3>${org.name}</h3><p>${org.description}</p><a class="donate-button" href="${org.donateLink}" target="_blank">Donate</a>`;
+            
+            // Add click event listener to track donations
+            const donateButton = orgItem.querySelector('.donate-button');
+            donateButton.addEventListener('click', () => {
+                gtag('event', 'click', {
+                    'event_category': 'Donate',
+                    'event_label': org.name,
+                    'value': 1
+                });
+            });
+
             organizationsContainer.appendChild(orgItem);
         });
     }
